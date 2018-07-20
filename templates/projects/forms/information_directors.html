@@ -11,7 +11,7 @@
     <hr></hr>
     <div class="container main-row p-0 m-0">
         <div class="form-group col-6">
-            <label for="{{ form.directors.id_for_label }}">{{ form.directors.label }} (본인 제외)</label>
+            <label for="{{ form.directors.id_for_label }}">{{ form.directors.label }}</label>
             <select class="form-control" name="{{ form.directors.html_name }}" id="{{ form.directors.id_for_label }}" multiple="multiple">
                 {% for opt in form.directors %}
                 {{ opt }}
