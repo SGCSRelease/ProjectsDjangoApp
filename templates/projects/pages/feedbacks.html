@@ -1,0 +1,20 @@
+{% extends 'projects/pages/information.html' %}
+
+{% block detail-feedback-style %}
+active
+{% endblock %}
+
+{% block detail-content %}
+<div class="py-3">
+    {% if feedbacks %}
+    {% for feedback in feedbacks %}
+    <span class="text-bold">{{ feedback.name }}</span>
+    <span>{{ feedback.creation_time }}</span>
+    <h3 class="py-3">{{ feedback.content }}</h3>
+    <hr></hr>
+    {% endfor %}
+    {% else %}
+    <div>아직 등록된 피드백이 없습니다.</div>
+    {% endif %}
+</div>
+{% endblock %}
