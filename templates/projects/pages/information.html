@@ -1,7 +1,7 @@
 {% extends 'projects/pages/main.html' %}
 
 {% block item-content %}
-<div class="row p-0 m-0">
+<div class="main-row p-0 m-0">
     <h3>Project : {{ project.name }}</h3>
     <div class="btn-group ml-auto" role="group" aria-label="Project Detail Tab">
         <a class="btn btn-outline-secondary main-button-style {% block detail-feedback-style %}{% endblock %}" href="{% url 'project-feedbacks' pk=project.pk %}">피드백</a>

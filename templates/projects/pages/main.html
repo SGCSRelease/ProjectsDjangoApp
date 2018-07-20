@@ -5,7 +5,7 @@ current-menu
 {% endblock %}
 
 {% block item-content %}
-<div class="row p-0 m-0">
+<div class="main-row p-0 m-0">
     <h3>Projects</h3>
     <a class="btn btn-outline-secondary main-button-style ml-auto" href="{% url 'project-create' %}">&plus; 새 프로젝트</a>
 </div>
@@ -14,7 +14,7 @@ current-menu
 <ul class="main-list">
     {% for project in projects %}
     <li class="main-list-item">
-        <div class="row p-0 m-0">
+        <div class="main-row p-0 m-0">
             <div class="col-lg-10 col-md-9 main-list-item-info">
                 <h5 class="pb-0 mb-0">{{ project.name }}</h5>
                 <p>{{ project.published_date }}</p>
