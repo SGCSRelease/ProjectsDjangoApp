@@ -23,7 +23,7 @@ class MainView(ListView):
             Q(secure_level=1) |
             Q(directors__exact=user, secure_level=2) |
             Q(project_manager=user)
-        )
+        ).distinct()
 
 
 class InformationView(DetailView):
