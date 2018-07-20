@@ -7,12 +7,17 @@ active
 {% block detail-content %}
 <div class="py-3">
     {% if feedbacks %}
-    {% for feedback in feedbacks %}
-    <span class="text-bold">{{ feedback.name }}</span>
-    <span>{{ feedback.creation_time }}</span>
-    <h3 class="py-3">{{ feedback.content }}</h3>
-    <hr></hr>
-    {% endfor %}
+        <ul class="main-list">
+        {% for feedback in feedbacks %}
+        <li class="main-list-item">
+            <div class="main-list-item-info">
+                <span class="text-bold">{{ feedback.name }}</span>
+                <span>{{ feedback.creation_time }}</span>
+                <h3 class="py-3">{{ feedback.content }}</h3>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
     {% else %}
     <div>아직 등록된 피드백이 없습니다.</div>
     {% endif %}
