@@ -53,6 +53,9 @@ class InformationDirectorsUpdateView(UpdateView):
     model = ProjectInformation
     fields = ('directors',)
 
+    def form_valid(self, form):
+        pass
+
 
 class InformationDeleteView(DeleteView):
     template_name = 'projects/forms/information_delete.html'
