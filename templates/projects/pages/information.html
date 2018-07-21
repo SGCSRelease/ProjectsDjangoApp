@@ -17,7 +17,7 @@
 {% block detail-content %}
 <div class="py-3">
     <h5>총괄 디렉터</h5>
-    <p>{{ project.project_manager }}</p>
+    <p>{{ project.project_manager.first_name }}({{ project.project_manager.username }})</p>
 </div>
 <div class="py-3">
     <h5>등록일시</h5>
@@ -31,7 +31,7 @@
     <h5>프로젝트 멤버</h5>
     {% if project.directors.all %}
     {% for director in project.directors.all %}
-    <span>{{ director}}</span>
+    <span>{{ director.first_name }}({{ director.username }})</span>
     {% endfor %}
     {% else %}
     <span>등록된 프로젝트 멤버가 없습니다.</span>
