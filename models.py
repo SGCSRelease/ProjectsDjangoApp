@@ -46,7 +46,7 @@ class Information(models.Model):
     )
     description = models.TextField(
         blank=True,
-        verbose_name='프로젝트 설명',
+        verbose_name='프로젝트 소개',
     )
     secure_level = models.PositiveIntegerField(
         choices=secure_levels,
