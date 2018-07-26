@@ -60,7 +60,7 @@ class Information(models.Model):
     )
     plan = models.TextField(
         blank=True,
-        verbose_name='진행계획',
+        verbose_name='진행 계획',
     )
     secure_level = models.PositiveIntegerField(
         choices=secure_levels,
