@@ -25,17 +25,17 @@
         </div>
         <div class="form-group col-12">
             <label class="text-bold" for="{{ form.reason.id_for_label }}">{{ form.reason.label }} (150자 내외)</label>
-            <p>1번의 목적을 달성하는데 있어 프로젝트 주제를 이와 같이 선정하게 된 이유 혹은 과정을 간단하게 적어주세요.</p>
+            <p>위의 목적을 달성하는데 있어 프로젝트 주제를 이와 같이 선정하게 된 이유 혹은 과정을 간단하게 적어주세요.</p>
             <textarea class="form-control" id="{{ form.reason.id_for_label }}" name="{{ form.reason.html_name }}" rows="10" placeholder="{{ form.reason.label }}">{% if form.reason.value %}{{ form.reason.value }}{% endif %}</textarea>
         </div>
         <div class="form-group col-12">
             <label class="text-bold" for="{{ form.plan.id_for_label }}">{{ form.plan.label }}</label>
-            <p>현재까지 진행 상황과 함께 앞으로 진행 계획을 구체적으로 적어주세요. 기존 계획과 실제 진행 사항을 비교하여 필요 시 계획을 조금 더 현실적이고 구체적으로 수정해서 기재해주시기 바랍니다.</p>
+            <p>현재까지 진행 상황과 함께 앞으로 계획을 구체적으로 적어주세요. 기존 계획이 지켜지지 않았을 경우, 팀원과 상의하여 보완 작업을 거친 후에 기재해주시기 바랍니다.</p>
             <textarea class="form-control" id="{{ form.plan.id_for_label }}" name="{{ form.plan.html_name }}" rows="10" placeholder="{{ form.plan.label }}">{% if form.plan.value %}{{ form.plan.value }}{% endif %}</textarea>
         </div>
         <div class="form-group col-12 col-md-4">
             <label class="text-bold" for="{{ form.secure_level.id_for_label }}">{{ form.secure_level.label }}</label>
-            <p>'팀원 지정'으로 설정하시고, 프로젝트 등록 후에 멤버 편집에서 멤버를 추가해주세요.</p>
+            <p>'팀원 지정'으로 설정하시고, 프로젝트 등록 후에 '멤버 편집'메뉴로 들어가서 멤버를 추가해주세요.</p>
             <select class="form-control" id="{{ form.secure_level.id_for_label }}" name="{{ form.secure_level.html_name }}" required>
                 {% for opt in form.secure_level %}
                 {{ opt }}
