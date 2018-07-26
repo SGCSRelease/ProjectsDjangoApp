@@ -48,6 +48,20 @@ class Information(models.Model):
         blank=True,
         verbose_name='프로젝트 소개',
     )
+    purpose = models.TextField(
+        max_length=150,
+        blank=True,
+        verbose_name='목적',
+    )
+    reason = models.TextField(
+        max_length=150,
+        blank=True,
+        verbose_name='주제 선정 이유',
+    )
+    plan = models.TextField(
+        blank=True,
+        verbose_name='진행계획',
+    )
     secure_level = models.PositiveIntegerField(
         choices=secure_levels,
         verbose_name='참여 가능 범위',
