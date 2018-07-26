@@ -16,19 +16,19 @@
 <hr></hr>
 {% block detail-content %}
 <div class="py-3">
-    <h5>총괄 디렉터</h5>
+    <h5 class="text-bold">총괄 디렉터</h5>
     <p>{{ project.project_manager.first_name }}({{ project.project_manager.username }})</p>
 </div>
 <div class="py-3">
-    <h5>등록일시</h5>
+    <h5 class="text-bold">등록일시</h5>
     <p>{{ project.published_date }}</p>
 </div>
 <div class="py-3">
-    <h5>프로젝트 참여 가능 범위</h5>
+    <h5 class="text-bold">프로젝트 참여 가능 범위</h5>
     <p>{{ project.get_secure_level_display }}</p>
 </div>
 <div class="py-3">
-    <h5>프로젝트 멤버</h5>
+    <h5 class="text-bold">프로젝트 멤버</h5>
     {% if project.directors.all %}
     {% for director in project.directors.all %}
     <span>{{ director.first_name }}({{ director.username }})</span>
@@ -38,7 +38,7 @@
     {% endif %}
 </div>
 <div class="py-3">
-    <h5>프로젝트 소개</h5>
+    <h5 class="text-bold">프로젝트 소개</h5>
     {% if project.description %}
     <p>{{ project.description }}</p>
     {% else %}
@@ -46,14 +46,15 @@
     {% endif %}
 </div>
 <div class="py-3">
-    <h5>프로젝트 목적</h5>
+    <h5 class="text-bold">프로젝트 목적</h5>
     {% if project.purpose %}
+    <p>{{ project.purpose }}</p>
     {% else %}
     <p>프로젝트 목적에 대한 설명이 없습니다.</p>
     {% endif %}
 </div>
 <div class="py-3">
-    <h5>주제 선정 이유</h5>
+    <h5 class="text-bold">주제 선정 이유</h5>
     {% if project.reason %}
     <p>{{ project.reason }}</p>
     {% else %}
@@ -61,7 +62,7 @@
     {% endif %}
 </div>
 <div class="py-3">
-    <h5>진행 계획</h5>
+    <h5 class="text-bold">진행 계획</h5>
     {% if project.plan %}
     <p>{{ project.plan }}</p>
     {% else %}
@@ -69,7 +70,7 @@
     {% endif %}
 </div>
 <div class="py-3">
-    <h5>프로젝트 기획서</h5>
+    <h5 class="text-bold">프로젝트 기획서</h5>
     {% if project.file %}
     <a href="{{ project.file.url }}">{{ project.file.url }}</a>
     {% else %}
